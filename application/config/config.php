@@ -52,10 +52,10 @@ $config['compress_output']      = FALSE;
 $config['time_reference']       = 'local';
 $config['rewrite_short_tags']   = FALSE;
 $config['proxy_ips']            = '';
-$config['project']              = 'SIONLAB';
-$config['nama_pendek']          = 'SIONLAB';
-$config['sub_title']            = 'Sistem Laboratorium';
-$config['title']                = 'Sistem Laboratorium';
+$config['project']              = 'TOKO GUBUG MART';
+$config['nama_pendek']          = 'TOKO GUBUG MART';
+$config['sub_title']            = 'GUBUG MART';
+$config['title']                = 'GUBUG MART';
 $config['fonts_path']           = 'system/fonts/';
 
 /* End of file config.php */
