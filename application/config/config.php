@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 date_default_timezone_set('Asia/Bangkok');
-$config['base_url']            = "http://localhost/indofood";
+$config['base_url']            = "http://localhost/toko";
 
 $config['index_page']          = '';
 
@@ -51,11 +51,11 @@ $config['csrf_expire']          = 7200;
 $config['compress_output']      = FALSE;
 $config['time_reference']       = 'local';
 $config['rewrite_short_tags']   = FALSE;
-$config['proxy_ips']            = '';
-$config['project']              = 'PT INDOFOOD';
-$config['nama_pendek']          = 'PT INDOFOOD';
-$config['sub_title']            = 'Indofood';
-$config['title']                = 'Indofood';
+$config['proxy_ips']            = 'Toko';
+$config['project']              = 'Toko';
+$config['nama_pendek']          = 'Toko';
+$config['sub_title']            = 'Toko';
+$config['title']                = 'Toko';
 $config['fonts_path']           = 'system/fonts/';
 
 /* End of file config.php */
