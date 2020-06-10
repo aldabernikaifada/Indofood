@@ -20,7 +20,7 @@ class Nama_alat extends CI_Controller {
 	public function form($param='')
 	{
 		$content   = "<div id='divsubcontent'></div>";
-		$header    = "Form Master Nama Alatt";
+		$header    = "Form Master Nama Alat";
 		$subheader = "nama_alat";
 		$buttons[] = button('jQuery.facebox.close()','Tutup','btn btn-default','data-dismiss="modal"');
 		echo $this->fungsi->parse_modal($header,$subheader,$content,$buttons,"");
@@ -38,8 +38,8 @@ class Nama_alat extends CI_Controller {
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'kode',
-					'label' => 'kode',
+					'field'	=> 'nama_alat',
+					'label' => 'nama_alat',
 					'rules' => 'required'
 				)
 			);
@@ -72,8 +72,8 @@ class Nama_alat extends CI_Controller {
 					'rules' => ''
 				),
 				array(
-					'field'	=> 'kode',
-					'label' => 'kode',
+					'field'	=> 'nama_alat',
+					'label' => 'nama_alat',
 					'rules' => 'required'
 				)
 			);

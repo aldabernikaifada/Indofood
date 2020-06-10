@@ -4,13 +4,13 @@
       <div class="col-lg-12">
         <div class="box box-primary">
           <div class="box-header with-border">
-            <h3 class="box-title">Master Bahan</h3>
+            <h3 class="box-title">Kelola Lokasi Penyimpanan</h3>
 
             <div class="box-tools pull-right">
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("master/master_bahan/form/base","#modal")','Add New Nama Bahan','btn btn-success');
+                echo button('load_silent("kelola/lokasi_penyimpanan/form/base","#modal")','Add New kelola lokasi penyimpanan','btn btn-success');
               } else {
                 # code...
               }
@@ -21,39 +21,35 @@
             <table width="100%" id="tableku" class="table table-striped">
               <thead>
                 <th>No</th>
-                <th>Kode</th>
-                <th>Jenis Bahan</th>
-                <th>Nama Bahan</th>
-                <th>Nama Satuan</th>
+                <th>Lokasi Penyimpanan</th>
                 <th>Status</th>
                 <th>Act</th>
               </thead>
               <tbody>
-          <?php 
+              <?php 
           $i = 1;
-          foreach($master_bahan->result() as $row): ?>
+          foreach($lokasi_penyimpanan->result() as $row): ?>
           <tr>
             <td align="center"><?=$i++?></td>
-            <td align="center"><?=$row->kode?></td>
-            <td align="center"><?=$row->jenis_bahan?></td>
-            <td align="center"><?=$row->nama_bahan?></td>
-            <td align="center"><?=$row->nama_satuan?></td>
+            <td align="center"><?=$row->nama_lokasi_penyimpanan?></td>
             <td align="center"><?=$row->status?></td>
             <td align="center">
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("master/master_bahan/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
+                echo button('load_silent("kelola/lokasi_penyimpanan/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
+ 
               } else {
                 # code...
               }
               ?>
-              <a href="<?= site_url('master/master_bahan/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus data ?')"><i class="fa fa-trash"></i></a>
+              <a href="<?= site_url('kelola/lokasi_penyimpanan/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus alat ?')"><i class="fa fa-trash"></i></a>
+
             </td>
           </tr>
 
         <?php endforeach;?>
-        </tbody>
+                </tbody>
             </table>
           </div>
         </div>

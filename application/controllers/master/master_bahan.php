@@ -38,7 +38,7 @@ class Master_bahan extends CI_Controller {
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'kode',
+					'field'	=> 'kode', //kolom mana yang mau di required (required:yang harus diisi)
 					'label' => 'kode',
 					'rules' => 'required'
 				)
@@ -53,7 +53,7 @@ class Master_bahan extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('kode','jenis_bahan','nama_bahan','id_status'));
+			$datapost = get_post_data(array('kode','jenis_bahan','nama_bahan','nama_satuan','status'));
 			$this->m_master_bahan->insertData($datapost);
 			$this->fungsi->run_js('load_silent("master/master_bahan","#content")');
 			$this->fungsi->message_box("Data Master Nama Bahan sukses disimpan...","success");
@@ -63,12 +63,12 @@ class Master_bahan extends CI_Controller {
 
 	public function show_editForm($id='')
 	{
-		$this->fungsi->check_previleges('nama_bahan');
+		$this->fungsi->check_previleges('nama_bahan'); //untuk mengechek batasan akses
 		$this->load->library('form_validation');
 		$config = array(
 				array(
 					'field'	=> 'id',
-					'label' => 'wes mbarke',
+					'label' => 'id',
 					'rules' => ''
 				),
 				array(
@@ -88,10 +88,10 @@ class Master_bahan extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','kode','jenis_bahan','nama_bahan','id_status'));
+			$datapost = get_post_data(array('id','kode','jenis_bahan','nama_bahan','nama_satuan','status'));
 			$this->m_master_bahan->updateData($datapost);
 			$this->fungsi->run_js('load_silent("master/master_bahan","#content")');
-			$this->fungsi->message_box("Data Master Master Bahan sukses diperbarui...","success");
+			$this->fungsi->message_box("Data Master Nama Bahan sukses diperbarui...","success");
 			$this->fungsi->catat($datapost,"Mengedit Master master_bahan dengan data sbb:",true);
 		}
 	}
@@ -103,4 +103,5 @@ class Master_bahan extends CI_Controller {
 	}
 }
 
-
+/* End of file master_bahan.php */
+/* Location: ./application/controllers/master/master_bahan.php */

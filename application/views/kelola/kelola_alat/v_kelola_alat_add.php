@@ -5,26 +5,10 @@
         
         
         <div class="form-group">
-            <label class="col-sm-4 control-label">Kode</label>
+            <label class="col-sm-4 control-label">Nama Alat</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'kode','class'=>'form-control'));?>
-            <?php echo form_error('kode');?>
-            <span id="check_data"></span>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-sm-4 control-label">Jenis Bahan</label>
-            <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'jenis_bahan','class'=>'form-control'));?>
-            <?php echo form_error('jenis_bahan');?>
-            <span id="check_data"></span>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-sm-4 control-label">Nama Bahan</label>
-            <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'nama_bahan','class'=>'form-control'));?>
-            <?php echo form_error('nama_bahan');?>
+            <?php echo form_input(array('name'=>'nama_alat','class'=>'form-control'));?>
+            <?php echo form_error('nama_alat');?>
             <span id="check_data"></span>
             </div>
         </div>
@@ -44,12 +28,11 @@
             <span id="check_data"></span>
             </div>
         </div>
-
         <div class="form-group">
-            <label class="col-sm-4 control-label">Save</label>
+            <label class="col-sm-4 control-label">Simpan</label>
             <div class="col-sm-8 tutup">
             <?php
-            echo button('send_form(document.faddmenugrup,"master/master_bahan/show_addForm/","#divsubcontent")','Save','btn btn-success')." ";
+            echo button('send_form(document.faddmenugrup,"kelola/kelola_alat/show_addForm/","#divsubcontent")','Simpan','btn btn-success')." ";
             ?>
             </div>
         </div>

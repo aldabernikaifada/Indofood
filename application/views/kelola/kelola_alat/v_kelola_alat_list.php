@@ -4,13 +4,13 @@
       <div class="col-lg-12">
         <div class="box box-primary">
           <div class="box-header with-border">
-            <h3 class="box-title">Master Bahan</h3>
+            <h3 class="box-title">Kelola Alat</h3>
 
             <div class="box-tools pull-right">
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("master/master_bahan/form/base","#modal")','Add New Nama Bahan','btn btn-success');
+                echo button('load_silent("kelola/kelola_alat/form/base","#modal")','Add New Kelola alat','btn btn-success');
               } else {
                 # code...
               }
@@ -21,34 +21,32 @@
             <table width="100%" id="tableku" class="table table-striped">
               <thead>
                 <th>No</th>
-                <th>Kode</th>
-                <th>Jenis Bahan</th>
-                <th>Nama Bahan</th>
+                <th>Nama Alat</th>
                 <th>Nama Satuan</th>
                 <th>Status</th>
                 <th>Act</th>
               </thead>
               <tbody>
-          <?php 
+              <?php 
           $i = 1;
-          foreach($master_bahan->result() as $row): ?>
+          foreach($kelola_alat->result() as $row): ?>
           <tr>
             <td align="center"><?=$i++?></td>
-            <td align="center"><?=$row->kode?></td>
-            <td align="center"><?=$row->jenis_bahan?></td>
-            <td align="center"><?=$row->nama_bahan?></td>
+            <td align="center"><?=$row->nama_alat?></td>
             <td align="center"><?=$row->nama_satuan?></td>
             <td align="center"><?=$row->status?></td>
             <td align="center">
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("master/master_bahan/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
-              } else {
+                echo button('load_silent("kelola/kelola_alat/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fw fa-edit','data-toggle="tooltip" title="Edit"');
+             
+              }
+               else {
                 # code...
               }
               ?>
-              <a href="<?= site_url('master/master_bahan/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus data ?')"><i class="fa fa-trash"></i></a>
+              <a href="<?= site_url('kelola/kelola_alat/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus alat ?')"><i class="fa fa-trash"></i></a>
             </td>
           </tr>
 

@@ -7,25 +7,25 @@
     <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
         
         <div class="form-group">
-            <label class="col-sm-4 control-label">Kode</label>
+            <label class="col-sm-4 control-label">Sumber Pendanaan</label>
             <div class="col-sm-8">
             <?php echo form_hidden('id',$row->id); ?>
-            <?php echo form_input(array('name'=>'Kode','value'=>$row->Kode,'class'=>'form-control'));?>
-            <?php echo form_error('Kode');?>
+            <?php echo form_input(array('name'=>'sumber_pendanaan','value'=>$row->sumber_pendanaan,'class'=>'form-control'));?>
+            <?php echo form_error('sumber_pendanaan');?>
             </div>
-        </div>
+            </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Nama</label>
+            <label class="col-sm-4 control-label">Keterangan</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'Nama','value'=>$row->Nama,'class'=>'form-control'));?>
-            <?php echo form_error('Nama');?>
+            <?php echo form_input(array('name'=>'keterangan','value'=>$row->keterangan,'class'=>'form-control'));?>
+            <?php echo form_error('keterangan');?>
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-4 control-label">Simpan</label>
             <div class="col-sm-8 tutup">
             <?php
-            echo button('send_form(document.faddmenugrup,"master/satuan/show_editForm/","#divsubcontent")','Simpan','btn btn-success')." ";
+            echo button('send_form(document.faddmenugrup,"master/sumber_pendanaan/show_editForm/","#divsubcontent")','Simpan','btn btn-success')." ";
             ?>
             </div>
         </div>

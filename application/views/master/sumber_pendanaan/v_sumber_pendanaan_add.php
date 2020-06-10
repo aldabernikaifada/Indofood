@@ -3,29 +3,30 @@
 <div class="box-body big">
     <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
         
-
+        
         <div class="form-group">
-            <label class="col-sm-4 control-label">Kode</label>
+            <label class="col-sm-4 control-label">Sumber Pendanaan</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'Kode','class'=>'form-control'));?>
-            <?php echo form_error('Kode');?>
+            <?php echo form_input(array('name'=>'sumber_pendanaan','class'=>'form-control'));?>
+            <?php echo form_error('sumber_pendanaan');?>
             <span id="check_data"></span>
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Nama</label>
+            <label class="col-sm-4 control-label">Keterangan</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'Nama','class'=>'form-control'));?>
-            <?php echo form_error('Nama');?>
+            <?php echo form_input(array('name'=>'keterangan','class'=>'form-control'));?>
+            <?php echo form_error('keterangan');?>
             <span id="check_data"></span>
             </div>
         </div>
-        </div>
-
+        
         <div class="form-group">
-            <label class="col-sm-4 control-label">Save</label>
+            <label class="col-sm-4 control-label">Simpan?</label>
             <div class="col-sm-8 tutup">
-            <?php echo button('send_form(document.faddmenugrup,"master/satuan/show_addForm/","#divsubcontent")','Save','btn btn-success')."";?>
+            <?php
+            echo button('send_form(document.faddmenugrup,"master/sumber_pendanaan/show_addForm/","#divsubcontent")','Simpan','btn btn-success')." ";
+            ?>
             </div>
         </div>
     </form>

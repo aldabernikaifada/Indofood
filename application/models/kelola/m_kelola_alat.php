@@ -1,35 +1,31 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class M_satuan extends CI_Model {
-//select->read
+class M_kelola_alat extends CI_Model {
+
 	public function getData($value='')
 	{
-		$this->db->from('master_satuan ma');
+		$this->db->from('kelola_alat ma');
 		$this->db->order_by('ma.id', 'desc');
 		return $this->db->get();
 	}
-    //insert->create
+
 	public function insertData($data='')
 	{
 		
-        $this->db->insert('master_satuan',$data);
+        $this->db->insert('kelola_alat',$data);
        
 	}
-//update
+
 	public function updateData($data='')
 	{
 		 $this->db->where('id',$data['id']);
-            $this->db->update('master_satuan',$data);
+            $this->db->update('kelola_alat',$data);
 	}
-//delete
 	public function deleteData($id='')
 	{
 		$this->db->where('id', $id);
-        $this->db->delete('master_satuan');
+        $this->db->delete('kelola_alat');
 	}
 
 }
-
-/* End of file m_satuan.php */
-/* Location: ./application/models/master/m_satuan.php */

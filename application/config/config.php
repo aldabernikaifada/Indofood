@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 date_default_timezone_set('Asia/Bangkok');
-$config['base_url']            = "http://localhost/toko";
+$config['base_url']            = "http://localhost/Toko";
 
 $config['index_page']          = '';
 
@@ -51,11 +51,11 @@ $config['csrf_expire']          = 7200;
 $config['compress_output']      = FALSE;
 $config['time_reference']       = 'local';
 $config['rewrite_short_tags']   = FALSE;
-$config['proxy_ips']            = 'Toko';
-$config['project']              = 'Toko';
-$config['nama_pendek']          = 'Toko';
-$config['sub_title']            = 'Toko';
-$config['title']                = 'Toko';
+$config['proxy_ips']            = '';
+$config['project']              = 'SIONLAB';
+$config['nama_pendek']          = 'SIONLAB';
+$config['sub_title']            = 'Sistem Laboratorium';
+$config['title']                = 'Sistem Laboratorium';
 $config['fonts_path']           = 'system/fonts/';
 
 /* End of file config.php */
