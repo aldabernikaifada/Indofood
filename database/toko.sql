@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Jun 2020 pada 03.40
+-- Waktu pembuatan: 11 Jun 2020 pada 06.01
 -- Versi server: 10.1.38-MariaDB
 -- Versi PHP: 5.6.40
 
@@ -40,18 +40,8 @@ CREATE TABLE `cms_captcha` (
 --
 
 INSERT INTO `cms_captcha` (`captcha_id`, `captcha_time`, `ip_address`, `word`) VALUES
-(3274, 1591798504, '127.0.0.1', '759388'),
-(3273, 1591798496, '127.0.0.1', '121062'),
-(3272, 1591798487, '127.0.0.1', '939653'),
-(3275, 1591800428, '::1', '826649'),
-(3276, 1591800692, '::1', '145889'),
-(3277, 1591801357, '::1', '590549'),
-(3278, 1591801614, '::1', '283870'),
-(3279, 1591801937, '::1', '125279'),
-(3280, 1591802802, '::1', '203418'),
-(3281, 1591806321, '::1', '978843'),
-(3282, 1591806576, '::1', '740189'),
-(3283, 1591808257, '::1', '568466');
+(3284, 1591839792, '::1', '666741'),
+(3285, 1591839812, '::1', '928860');
 
 -- --------------------------------------------------------
 
@@ -135,7 +125,8 @@ INSERT INTO `cms_log` (`id_log`, `ip`, `mac_address`, `time`, `kegiatan`, `user`
 (60, '::1', '', '2020-06-04 21:08:02', 'Menambah Master kategori_no_induk dengan data sbb:<br />\r\n                    <ul><li><b>kategori</b> dengan value <b>kta</b></li><li><b>nomor_induk</b> dengan value <b>4612418016</b></li></ul>', 'kholiq'),
 (61, '::1', '', '2020-06-04 21:49:02', 'Menambah Master kategori_no_induk dengan data sbb:<br />\r\n                    <ul><li><b>kategori</b> dengan value <b>sim</b></li><li><b>nomor_induk</b> dengan value <b>5362532535</b></li></ul>', 'kholiq'),
 (62, '127.0.0.1', '', '2020-06-10 21:15:04', 'Login  by Kholiq', 'kholiq'),
-(63, '::1', '', '2020-06-10 23:25:18', 'Logout TOKO GUBUG MART by Kholiq', 'kholiq');
+(63, '::1', '', '2020-06-10 23:25:18', 'Logout TOKO GUBUG MART by Kholiq', 'kholiq'),
+(64, '::1', '', '2020-06-11 08:43:32', 'Login  by Kholiq', 'kholiq');
 
 -- --------------------------------------------------------
 
@@ -234,7 +225,7 @@ CREATE TABLE `cms_user` (
 --
 
 INSERT INTO `cms_user` (`id`, `nama`, `gambar`, `username`, `password`, `level`, `bagian`, `no_hp`, `alamat`, `last_login`) VALUES
-(1, 'Kholiq', NULL, 'kholiq', '*F1378C253EEBE31F135CC41EF4A98D077EB98F5D', 1, 1, NULL, NULL, '2020-06-10 21:15:04'),
+(1, 'Kholiq', NULL, 'kholiq', '*F1378C253EEBE31F135CC41EF4A98D077EB98F5D', 1, 1, NULL, NULL, '2020-06-11 08:43:32'),
 (2, 'RENSI EKA PRATTISTIA', 'files/2016/10/197f1fe92d49367824b4ec55d06af614.jpg', 'rensi', '*711CD8D9847EE80DEDC2B331ADB185CD0100EA86', 2, 1, '-', '-', '2017-03-01 18:05:17'),
 (3, 'Damas Fahmi Assena', 'files/2016/09/062918947f59511ed8824be8462b2669.jpg', 'damas', '*A8244C6E6B51D4D7C6F89A1D145CE244EF9A12A5', 2, 1, '089 884 189 22', 'Jl. Shima No.6 Pengkol, Jepara', '2017-03-02 11:27:31'),
 (7, 'Suparno', 'files/2016/09/15322f731347f50f18ceee0b7e5d346a.jpg', 'parno', '*BDEE3A29CD9E06BC8896561176692DD675D75D45', 6, 1, '0291-595628', 'Jl. Citrosoma RT. 17/06', '2017-01-20 13:28:02'),
@@ -348,13 +339,13 @@ ALTER TABLE `master_user`
 -- AUTO_INCREMENT untuk tabel `cms_captcha`
 --
 ALTER TABLE `cms_captcha`
-  MODIFY `captcha_id` bigint(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3284;
+  MODIFY `captcha_id` bigint(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3286;
 
 --
 -- AUTO_INCREMENT untuk tabel `cms_log`
 --
 ALTER TABLE `cms_log`
-  MODIFY `id_log` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id_log` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT untuk tabel `cms_menu`
