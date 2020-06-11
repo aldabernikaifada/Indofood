@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2020 at 04:36 PM
--- Server version: 10.1.32-MariaDB
--- PHP Version: 5.6.36
+-- Waktu pembuatan: 11 Jun 2020 pada 03.40
+-- Versi server: 10.1.38-MariaDB
+-- Versi PHP: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_captcha`
+-- Struktur dari tabel `cms_captcha`
 --
 
 CREATE TABLE `cms_captcha` (
@@ -36,18 +36,27 @@ CREATE TABLE `cms_captcha` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 --
--- Dumping data for table `cms_captcha`
+-- Dumping data untuk tabel `cms_captcha`
 --
 
 INSERT INTO `cms_captcha` (`captcha_id`, `captcha_time`, `ip_address`, `word`) VALUES
 (3274, 1591798504, '127.0.0.1', '759388'),
 (3273, 1591798496, '127.0.0.1', '121062'),
-(3272, 1591798487, '127.0.0.1', '939653');
+(3272, 1591798487, '127.0.0.1', '939653'),
+(3275, 1591800428, '::1', '826649'),
+(3276, 1591800692, '::1', '145889'),
+(3277, 1591801357, '::1', '590549'),
+(3278, 1591801614, '::1', '283870'),
+(3279, 1591801937, '::1', '125279'),
+(3280, 1591802802, '::1', '203418'),
+(3281, 1591806321, '::1', '978843'),
+(3282, 1591806576, '::1', '740189'),
+(3283, 1591808257, '::1', '568466');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_log`
+-- Struktur dari tabel `cms_log`
 --
 
 CREATE TABLE `cms_log` (
@@ -60,7 +69,7 @@ CREATE TABLE `cms_log` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
 --
--- Dumping data for table `cms_log`
+-- Dumping data untuk tabel `cms_log`
 --
 
 INSERT INTO `cms_log` (`id_log`, `ip`, `mac_address`, `time`, `kegiatan`, `user`) VALUES
@@ -125,12 +134,13 @@ INSERT INTO `cms_log` (`id_log`, `ip`, `mac_address`, `time`, `kegiatan`, `user`
 (59, '::1', '', '2020-06-04 20:06:29', 'Login  by Kholiq', 'kholiq'),
 (60, '::1', '', '2020-06-04 21:08:02', 'Menambah Master kategori_no_induk dengan data sbb:<br />\r\n                    <ul><li><b>kategori</b> dengan value <b>kta</b></li><li><b>nomor_induk</b> dengan value <b>4612418016</b></li></ul>', 'kholiq'),
 (61, '::1', '', '2020-06-04 21:49:02', 'Menambah Master kategori_no_induk dengan data sbb:<br />\r\n                    <ul><li><b>kategori</b> dengan value <b>sim</b></li><li><b>nomor_induk</b> dengan value <b>5362532535</b></li></ul>', 'kholiq'),
-(62, '127.0.0.1', '', '2020-06-10 21:15:04', 'Login  by Kholiq', 'kholiq');
+(62, '127.0.0.1', '', '2020-06-10 21:15:04', 'Login  by Kholiq', 'kholiq'),
+(63, '::1', '', '2020-06-10 23:25:18', 'Logout TOKO GUBUG MART by Kholiq', 'kholiq');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_menu`
+-- Struktur dari tabel `cms_menu`
 --
 
 CREATE TABLE `cms_menu` (
@@ -146,7 +156,7 @@ CREATE TABLE `cms_menu` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 --
--- Dumping data for table `cms_menu`
+-- Dumping data untuk tabel `cms_menu`
 --
 
 INSERT INTO `cms_menu` (`id`, `alias`, `nama`, `deskripsi`, `allowed_level`, `url`, `aktif`, `urutan`, `grup`) VALUES
@@ -155,22 +165,12 @@ INSERT INTO `cms_menu` (`id`, `alias`, `nama`, `deskripsi`, `allowed_level`, `ur
 (35, 'semua', 'semua', 'untuk login semua', '+1+2+3+4+5+6+8+7+', 'cms/login/admin_page', 1, 1, 3),
 (88, 'crud_user', 'Tambah,edit,delete user', 'tambah_edit_delete', '+1+2+3+4+', 'apl/crud', 1, 1, 3),
 (102, 'log', 'Log System', 'Log System', '+1+2+', 'cms/catatan/catat', 1, 2, 1),
-(136, 'satuan', 'Satuan', '-', '+1+2+', 'master/satuan', 1, 9, 2),
-(104, 'status_pak', 'Home', 'Status Pengajuan PAK', '+1+2+3+4+5+6+', 'pak/dashboard/status_pak', 1, 1, 101),
-(135, 'nama_bahan', 'Nama Bahan', '-', '+1+2+', 'master/master_bahan', 1, 8, 2),
-(134, 'nama_alat', 'Nama Alat', '-', '+1+2+', 'master/nama_alat', 1, 7, 2),
-(133, 'mata_kuliah', 'Mata Kuliah', '-', '+1+2+', 'master/mata_kuliah', 1, 6, 2),
-(132, 'tipe_lab', 'Tipe Lab', '-', '+1+2+', 'master/tipe_lab', 1, 5, 2),
-(131, 'kategori_alat_bahan', 'Kategori Alat Bahan', '-', '+1+2+', 'master/kategori_alat_bahan', 1, 4, 2),
-(130, 'kategori_no_induk', 'Kategori No Induk', '-', '+1+2+', 'master/kategori_no_induk', 1, 3, 2),
-(129, 'gambar_depan', 'Gambar Depan', '-', '+1+2+', 'master/gambar_depan', 1, 2, 2),
-(128, 'instansi', 'Instansi', '-', '+1+2+', 'master/instansi', 1, 1, 2),
-(137, 'periode', 'Periode', '-', '+1+2+', 'peminjaman/periode', 1, 1, 4);
+(104, 'status_pak', 'Home', 'Status Pengajuan PAK', '+1+2+3+4+5+6+', 'pak/dashboard/status_pak', 1, 1, 101);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_menu_grup`
+-- Struktur dari tabel `cms_menu_grup`
 --
 
 CREATE TABLE `cms_menu_grup` (
@@ -180,7 +180,7 @@ CREATE TABLE `cms_menu_grup` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
 --
--- Dumping data for table `cms_menu_grup`
+-- Dumping data untuk tabel `cms_menu_grup`
 --
 
 INSERT INTO `cms_menu_grup` (`id_grup_menu`, `nama_grup`, `icon`) VALUES
@@ -194,7 +194,7 @@ INSERT INTO `cms_menu_grup` (`id_grup_menu`, `nama_grup`, `icon`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_online`
+-- Struktur dari tabel `cms_online`
 --
 
 CREATE TABLE `cms_online` (
@@ -203,7 +203,7 @@ CREATE TABLE `cms_online` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
 --
--- Dumping data for table `cms_online`
+-- Dumping data untuk tabel `cms_online`
 --
 
 INSERT INTO `cms_online` (`user_id`, `last_activity`) VALUES
@@ -213,7 +213,7 @@ INSERT INTO `cms_online` (`user_id`, `last_activity`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_user`
+-- Struktur dari tabel `cms_user`
 --
 
 CREATE TABLE `cms_user` (
@@ -230,7 +230,7 @@ CREATE TABLE `cms_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `cms_user`
+-- Dumping data untuk tabel `cms_user`
 --
 
 INSERT INTO `cms_user` (`id`, `nama`, `gambar`, `username`, `password`, `level`, `bagian`, `no_hp`, `alamat`, `last_login`) VALUES
@@ -248,111 +248,7 @@ INSERT INTO `cms_user` (`id`, `nama`, `gambar`, `username`, `password`, `level`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_bahan`
---
-
-CREATE TABLE `master_bahan` (
-  `id` int(11) NOT NULL,
-  `kode` varchar(4) DEFAULT NULL,
-  `jenis_bahan` varchar(10) DEFAULT NULL,
-  `nama_bahan` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
-
---
--- Dumping data for table `master_bahan`
---
-
-INSERT INTO `master_bahan` (`id`, `kode`, `jenis_bahan`, `nama_bahan`) VALUES
-(1, 'BK01', 'Buku', 'Lean UX'),
-(2, 'MK02', 'Mikroskop ', 'Mikroskop Besar'),
-(3, 'mk03', 'laptop', 'Laptop rog'),
-(4, 'mk04', 'kabel', NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `master_instansi`
---
-
-CREATE TABLE `master_instansi` (
-  `id` int(11) NOT NULL,
-  `nama` varchar(255) DEFAULT NULL,
-  `alamat` varchar(255) DEFAULT NULL,
-  `kode` varchar(255) DEFAULT NULL,
-  `provinsi` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `website` varchar(255) DEFAULT NULL,
-  `logo` varchar(255) DEFAULT NULL,
-  `telepon` varchar(255) DEFAULT NULL,
-  `kementerian` varchar(255) DEFAULT NULL,
-  `tahun_ajaran` varchar(255) DEFAULT NULL,
-  `nama_fakultas` varchar(255) DEFAULT NULL,
-  `nama_dekan` varchar(255) DEFAULT NULL,
-  `alamat_fakultas` varchar(255) DEFAULT NULL,
-  `telepon_fakultas` varchar(255) DEFAULT NULL,
-  `nama_jurusan` varchar(255) DEFAULT NULL,
-  `nama_kajur` varchar(255) DEFAULT NULL,
-  `nama_kalab` varchar(255) DEFAULT NULL,
-  `telepon_jurusan` varchar(255) DEFAULT NULL,
-  `alamat_jurusan` varchar(255) DEFAULT NULL,
-  `deskripsi_jurusan` varchar(255) DEFAULT NULL,
-  `peta_jurusan` varchar(255) DEFAULT NULL,
-  `favicon` varchar(255) DEFAULT NULL,
-  `zona_waktu` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
-
---
--- Dumping data for table `master_instansi`
---
-
-INSERT INTO `master_instansi` (`id`, `nama`, `alamat`, `kode`, `provinsi`, `email`, `website`, `logo`, `telepon`, `kementerian`, `tahun_ajaran`, `nama_fakultas`, `nama_dekan`, `alamat_fakultas`, `telepon_fakultas`, `nama_jurusan`, `nama_kajur`, `nama_kalab`, `telepon_jurusan`, `alamat_jurusan`, `deskripsi_jurusan`, `peta_jurusan`, `favicon`, `zona_waktu`) VALUES
-(1, 'Universitas Negeri Semarang', 'Kampus Sekaran, Gunungpati, Semarang', '', '', '', '', 'files/2020/03/ebcff3bcfaf285d80bf3e5144993191d.png', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `master_kategori_alat_bahan`
---
-
-CREATE TABLE `master_kategori_alat_bahan` (
-  `id` int(11) NOT NULL,
-  `kode` varchar(255) DEFAULT NULL,
-  `nama_alat_bahan` varchar(255) DEFAULT NULL,
-  `jenis` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `master_kategori_alat_bahan`
---
-
-INSERT INTO `master_kategori_alat_bahan` (`id`, `kode`, `nama_alat_bahan`, `jenis`) VALUES
-(1, 'A001', 'Laptop Asus ROG', 'Laptop'),
-(3, 'mk004', 'kabel lan', 'kabel');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `master_kategori_no_induk`
---
-
-CREATE TABLE `master_kategori_no_induk` (
-  `id` int(255) NOT NULL,
-  `kategori` varchar(255) DEFAULT NULL,
-  `nomor_induk` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `master_kategori_no_induk`
---
-
-INSERT INTO `master_kategori_no_induk` (`id`, `kategori`, `nomor_induk`) VALUES
-(0, 'kta', '4612418016'),
-(0, 'sim', '5362532535');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `master_level`
+-- Struktur dari tabel `master_level`
 --
 
 CREATE TABLE `master_level` (
@@ -361,63 +257,21 @@ CREATE TABLE `master_level` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `master_level`
+-- Dumping data untuk tabel `master_level`
 --
 
 INSERT INTO `master_level` (`id`, `level`) VALUES
-(1, 'Super Admin'),
-(2, 'Admin'),
-(3, 'Level 1'),
-(4, 'Level 2'),
+(1, 'Admin'),
+(2, 'Pegawai'),
+(3, 'Supplier'),
+(4, 'Pembeli'),
 (5, 'Level 3'),
 (6, 'Level 0');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_nama_alat`
---
-
-CREATE TABLE `master_nama_alat` (
-  `id` int(11) NOT NULL,
-  `kode` varchar(255) DEFAULT NULL,
-  `nama_alat` varchar(255) DEFAULT NULL,
-  `keterangan` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
-
---
--- Dumping data for table `master_nama_alat`
---
-
-INSERT INTO `master_nama_alat` (`id`, `kode`, `nama_alat`, `keterangan`) VALUES
-(1, 'MK01', 'Router', 'Router'),
-(2, 'MK02', 'kabel LAN', 'Kabel'),
-(3, 'mk03', 'laptop', 'baru'),
-(4, 'mk04', 'kabel', 'rusak');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `master_satuan`
---
-
-CREATE TABLE `master_satuan` (
-  `id` int(11) NOT NULL,
-  `nama_satuan` varchar(255) NOT NULL,
-  `keterangan` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `master_satuan`
---
-
-INSERT INTO `master_satuan` (`id`, `nama_satuan`, `keterangan`) VALUES
-(0, 'buku', 'sistem operasi SI');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `master_user`
+-- Struktur dari tabel `master_user`
 --
 
 CREATE TABLE `master_user` (
@@ -427,189 +281,110 @@ CREATE TABLE `master_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `master_user`
+-- Dumping data untuk tabel `master_user`
 --
 
 INSERT INTO `master_user` (`id`, `nip`, `level`) VALUES
 (2, 'jihan', '1');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `peminjaman_periode`
---
-
-CREATE TABLE `peminjaman_periode` (
-  `id` int(255) NOT NULL,
-  `nama_alat` varchar(255) DEFAULT NULL,
-  `merk` varchar(255) DEFAULT NULL,
-  `kondisi` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `cms_captcha`
+-- Indeks untuk tabel `cms_captcha`
 --
 ALTER TABLE `cms_captcha`
   ADD PRIMARY KEY (`captcha_id`) USING BTREE,
   ADD KEY `word` (`word`) USING BTREE;
 
 --
--- Indexes for table `cms_log`
+-- Indeks untuk tabel `cms_log`
 --
 ALTER TABLE `cms_log`
   ADD PRIMARY KEY (`id_log`) USING BTREE;
 
 --
--- Indexes for table `cms_menu`
+-- Indeks untuk tabel `cms_menu`
 --
 ALTER TABLE `cms_menu`
   ADD PRIMARY KEY (`id`) USING BTREE;
 
 --
--- Indexes for table `cms_menu_grup`
+-- Indeks untuk tabel `cms_menu_grup`
 --
 ALTER TABLE `cms_menu_grup`
   ADD PRIMARY KEY (`id_grup_menu`) USING BTREE;
 
 --
--- Indexes for table `cms_online`
+-- Indeks untuk tabel `cms_online`
 --
 ALTER TABLE `cms_online`
   ADD PRIMARY KEY (`user_id`) USING BTREE;
 
 --
--- Indexes for table `cms_user`
+-- Indeks untuk tabel `cms_user`
 --
 ALTER TABLE `cms_user`
   ADD PRIMARY KEY (`id`) USING BTREE;
 
 --
--- Indexes for table `master_bahan`
---
-ALTER TABLE `master_bahan`
-  ADD PRIMARY KEY (`id`) USING BTREE;
-
---
--- Indexes for table `master_instansi`
---
-ALTER TABLE `master_instansi`
-  ADD PRIMARY KEY (`id`) USING BTREE;
-
---
--- Indexes for table `master_kategori_alat_bahan`
---
-ALTER TABLE `master_kategori_alat_bahan`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `master_level`
+-- Indeks untuk tabel `master_level`
 --
 ALTER TABLE `master_level`
   ADD PRIMARY KEY (`id`) USING BTREE;
 
 --
--- Indexes for table `master_nama_alat`
---
-ALTER TABLE `master_nama_alat`
-  ADD PRIMARY KEY (`id`) USING BTREE;
-
---
--- Indexes for table `master_satuan`
---
-ALTER TABLE `master_satuan`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `master_user`
+-- Indeks untuk tabel `master_user`
 --
 ALTER TABLE `master_user`
   ADD PRIMARY KEY (`id`) USING BTREE;
 
 --
--- Indexes for table `peminjaman_periode`
---
-ALTER TABLE `peminjaman_periode`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `cms_captcha`
+-- AUTO_INCREMENT untuk tabel `cms_captcha`
 --
 ALTER TABLE `cms_captcha`
-  MODIFY `captcha_id` bigint(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3275;
+  MODIFY `captcha_id` bigint(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3284;
 
 --
--- AUTO_INCREMENT for table `cms_log`
+-- AUTO_INCREMENT untuk tabel `cms_log`
 --
 ALTER TABLE `cms_log`
-  MODIFY `id_log` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id_log` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
--- AUTO_INCREMENT for table `cms_menu`
+-- AUTO_INCREMENT untuk tabel `cms_menu`
 --
 ALTER TABLE `cms_menu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
 
 --
--- AUTO_INCREMENT for table `cms_menu_grup`
+-- AUTO_INCREMENT untuk tabel `cms_menu_grup`
 --
 ALTER TABLE `cms_menu_grup`
   MODIFY `id_grup_menu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=173;
 
 --
--- AUTO_INCREMENT for table `cms_user`
+-- AUTO_INCREMENT untuk tabel `cms_user`
 --
 ALTER TABLE `cms_user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT for table `master_bahan`
---
-ALTER TABLE `master_bahan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `master_instansi`
---
-ALTER TABLE `master_instansi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `master_kategori_alat_bahan`
---
-ALTER TABLE `master_kategori_alat_bahan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `master_level`
+-- AUTO_INCREMENT untuk tabel `master_level`
 --
 ALTER TABLE `master_level`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `master_nama_alat`
---
-ALTER TABLE `master_nama_alat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `master_user`
+-- AUTO_INCREMENT untuk tabel `master_user`
 --
 ALTER TABLE `master_user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `peminjaman_periode`
---
-ALTER TABLE `peminjaman_periode`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
