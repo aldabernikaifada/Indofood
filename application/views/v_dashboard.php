@@ -81,7 +81,7 @@
 		<!-- ./col -->
 		<div class="col-lg-3 col-xs-6">
 		<!-- small box --> 
-		<div class="small-box bg-green">
+		<div class="small-box bg-purple">
 		<div class="inner">
 		<h3>65</h3> 
 		<p>Purchase</p>
@@ -96,7 +96,7 @@
     	<!-- ./col -->
 		<div class="col-lg-3 col-xs-6">
 		<!-- small box --> 
-		<div class="small-box bg-purple">
+		<div class="small-box bg-green">
 		<div class="inner">
 		<h3>200</h3> 
 		<p>Stok</p>
