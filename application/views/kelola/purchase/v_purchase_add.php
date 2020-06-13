@@ -31,7 +31,7 @@
         <div class="form-group">
             <label class="col-sm-4 control-label">Tanggal Purchase</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'tanggal_purchase','class'=>'form-control'));?>
+            <?php echo form_input(array('name'=>'tanggal_purchase','type'=>'date','class'=>'form-control'));?>
             <?php echo form_error('tanggal_purchase');?>
             <span id="check_data"></span>
             </div>
