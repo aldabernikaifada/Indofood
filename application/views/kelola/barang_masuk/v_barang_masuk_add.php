@@ -4,6 +4,14 @@
     <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
         
         
+            <div class="form-group">
+            <label class="col-sm-4 control-label">ID Barang Masuk</label>
+            <div class="col-sm-8">
+            <?php echo form_input(array('name'=>'id','class'=>'form-control'));?>
+            <?php echo form_error('id');?>
+            <span id="check_data"></span>
+            </div>
+        </div>
         <div class="form-group">
             <label class="col-sm-4 control-label">Kode Barang Masuk</label>
             <div class="col-sm-8">
@@ -17,6 +25,14 @@
             <div class="col-sm-8">
             <?php echo form_input(array('name'=>'kode_supplier','class'=>'form-control'));?>
             <?php echo form_error('kode_supplier');?>
+            <span id="check_data"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Nama Produk</label>
+            <div class="col-sm-8">
+            <?php echo form_input(array('name'=>'nama_produk','class'=>'form-control'));?>
+            <?php echo form_error('nama_produk');?>
             <span id="check_data"></span>
             </div>
         </div>
@@ -64,7 +80,7 @@
             <label class="col-sm-4 control-label">Save</label>
             <div class="col-sm-8 tutup">
             <?php
-            echo button('send_form(document.faddmenugrup,"kelola/purchase/show_addForm/","#divsubcontent")','Save','btn btn-success')." ";
+            echo button('send_form(document.faddmenugrup,"kelola/barang_masuk/show_addForm/","#divsubcontent")','Save','btn btn-success')." ";
             ?>
             </div>
         </div>
