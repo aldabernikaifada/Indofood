@@ -71,7 +71,7 @@
         <div class="form-group">
             <label class="col-sm-4 control-label">Tanggal Masuk</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'tanggal_masuk','class'=>'form-control'));?>
+            <?php echo form_input(array('name'=>'tanggal_masuk','type'=>'date','class'=>'form-control'));?>
             <?php echo form_error('tanggal_masuk');?>
             <span id="check_data"></span>
             </div>
