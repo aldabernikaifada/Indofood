@@ -51,7 +51,7 @@ class barang_masuk extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','kode_barangmasuk','kode_supplier','nama_barang','jenis_barang','satuan','harga_satuan','jumlah','tanggal_masuk'));
+			$datapost = get_post_data(array('id','kode_barangmasuk','kode_supplier','nama_produk','jenis_produk','satuan','harga_satuan','jumlah','tanggal_masuk'));
 			$this->m_barang_masuk->insertData($datapost);
 			$this->fungsi->run_js('load_silent("kelola/barang_masuk","#content")');
 			$this->fungsi->message_box("Data Barang Masuk disimpan...","success");

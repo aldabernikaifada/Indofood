@@ -21,6 +21,14 @@
             </div>
         </div>
         <div class="form-group">
+            <label class="col-sm-4 control-label">Nama Produk</label>
+            <div class="col-sm-8">
+            <?php echo form_input(array('name'=>'nama_produk','class'=>'form-control'));?>
+            <?php echo form_error('nama_produk');?>
+            <span id="check_data"></span>
+            </div>
+        </div>
+        <div class="form-group">
             <label class="col-sm-4 control-label">Jenis Produk</label>
             <div class="col-sm-8">
             <?php echo form_input(array('name'=>'jenis_produk','class'=>'form-control'));?>
@@ -55,7 +63,7 @@
         <div class="form-group">
             <label class="col-sm-4 control-label">Tanggal Masuk</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'tanggal_masuk','class'=>'form-control'));?>
+            <?php echo form_input(array('name'=>'tanggal_masuk','type'=>'date','class'=>'form-control'));?>
             <?php echo form_error('tanggal_masuk');?>
             <span id="check_data"></span>
             </div>
@@ -64,7 +72,7 @@
             <label class="col-sm-4 control-label">Save</label>
             <div class="col-sm-8 tutup">
             <?php
-            echo button('send_form(document.faddmenugrup,"kelola/purchase/show_addForm/","#divsubcontent")','Save','btn btn-success')." ";
+            echo button('send_form(document.faddmenugrup,"kelola/barang_masuk/show_addForm/","#divsubcontent")','Save','btn btn-success')." ";
             ?>
             </div>
         </div>
