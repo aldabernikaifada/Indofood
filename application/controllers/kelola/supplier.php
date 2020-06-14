@@ -13,7 +13,7 @@ class supplier extends CI_Controller {
 	public function index()
 	{
 		$this->fungsi->check_previleges('supplier');
-		$data['stok'] = $this->m_supplier->getData();
+		$data['supplier'] = $this->m_supplier->getData();
 		$this->load->view('kelola/supplier/v_supplier_list',$data);
 	}
 	public function form($param='')
