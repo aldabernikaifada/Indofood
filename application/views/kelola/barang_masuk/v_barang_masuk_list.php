@@ -4,13 +4,13 @@
       <div class="col-lg-12">
         <div class="box box-primary">
           <div class="box-header with-border">
-            <h3 class="box-title">Supplier</h3>
+            <h3 class="box-title">Barang Masuk</h3>
 
             <div class="box-tools pull-right">
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("kelola/supplier/form/base","#modal")','Add New Supplier','btn btn-success');
+                echo button('load_silent("kelola/barang_masuk/form/base","#modal")','Add New Barang Masuk','btn btn-success');
               } else {
                 # code...
               }
@@ -21,33 +21,41 @@
             <table width="100%" id="tableku" class="table table-striped">
               <thead>
                 <th>No</th>
+                <th>Kode Barang Masuk</th>
                 <th>Kode Supplier</th>
-                <th>Nama Supplier</th>
-                <th>Nomor Telepon</th>
-                <th>Keterangan</th>
+                <th>Nama Produk</th>
+                <th>Jenis Produk</th>
+                <th>Satuan</th>
+                <th>Harga Satuan</th>
+                <th>Jumlah</th>
+                <th>Tanggal Masuk</th>
                 <th>Act</th>
               </thead>
               <tbody>
               <?php 
           $i = 1;
-          foreach($supplier->result() as $row): ?>
+          foreach($barang_masuk->result() as $row): ?>
           <tr>
           <td align="center"><?=$i++?></td>
+            <td align="center"><?=$row->kode_barangmasuk?></td>
             <td align="center"><?=$row->kode_supplier?></td>
-            <td align="center"><?=$row->nama_supplier?></td>
-            <td align="center"><?=$row->telepon?></td>
-            <td align="center"><?=$row->keterangan?></td>
+            <td align="center"><?=$row->nama_produk?></td>
+            <td align="center"><?=$row->jenis_produk?></td>
+            <td align="center"><?=$row->satuan?></td>
+            <td align="center"><?=$row->harga_satuan?></td>
+            <td align="center"><?=$row->jumlah?></td>
+            <td align="center"><?=$row->tanggal_masuk?></td>
             <td align="center">
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("kelola/supplier/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
+                echo button('load_silent("kelola/barang_masuk/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
  
               } else {
                 # code...
               }
               ?>
-              <a href="<?= site_url('kelola/supplier/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus Supplier ?')"><i class="fa fa-trash"></i></a>
+              <a href="<?= site_url('kelola/barang_masuk/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus Barang Masuk ?')"><i class="fa fa-trash"></i></a>
 
             </td>
           </tr>
