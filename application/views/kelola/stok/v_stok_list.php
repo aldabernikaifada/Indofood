@@ -42,7 +42,7 @@
             <td align="center"><?=$row->purchase?></td>
             <td align="center"><?=$row->produk_terjual?></td>
             <td align="center"><?=$row->jumlah_stok?></td>
-            <td align="center"><?=$row->harga_satuan?></td>
+            <td align="left">Rp. <?=number_format($row->harga_satuan)?></td>
             <td align="center">
             <?php
               $sesi = from_session('level');

@@ -43,8 +43,8 @@
             <td align="center"><?=$row->nama_produk?></td>
             <td align="center"><?=$row->tanggal_jual?></td>
             <td align="center"><?=$row->jumlah?></td>
-            <td align="center"><?=$row->harga?></td>
-            <td align="center"><?=$row->total?></td>
+            <td align="left">Rp. <?=number_format($row->harga)?></td>
+            <td align="left">Rp. <?=number_format($row->total)?></td>
             <td align="center">
             <?php
               $sesi = from_session('level');

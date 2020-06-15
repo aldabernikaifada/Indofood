@@ -11,7 +11,7 @@
 		<p>Produk</p>
 		</div>
 		<div class="icon">
-		<i class="fa fa-cubes"></i>
+		<i class="fa fa-cube"></i>
 		</div>
 		<h5 class="small-box-footer"<?php echo button('load_silent("kelola/produk_view","#content")','' ,'  ');?>More info <i class="fa fa-arrow-circle-right"></i></h5>
 		</div>
@@ -43,7 +43,7 @@
 		<p>Pengembalian</p>
 		</div>
 		<div class="icon">
-		<i class="fa fa-cubes"></i>
+		<i class="fa fa-exchange"></i>
 		</div>
 		<h5 class="small-box-footer"<?php echo button('load_silent("kelola/pengembalian_view","#content")','' ,'  ');?>More info <i class="fa fa-arrow-circle-right"></i></h5>
 		</div>
@@ -59,7 +59,7 @@
 		<p>Penjualan</p>
 		</div>
 		<div class="icon">
-		<i class="fa fa-cubes"></i>
+		<i class="fa fa-cart-plus"></i>
 		</div>
 		<h5 class="small-box-footer"<?php echo button('load_silent("kelola/penjualan_view","#content")','' ,'  ');?>More info <i class="fa fa-arrow-circle-right"></i></h5>
 		</div>

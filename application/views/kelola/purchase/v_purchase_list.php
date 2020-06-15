@@ -41,8 +41,8 @@
             <td align="center"><?=$row->jumlah_produk?></td>
             <td align="center"><?=$row->tanggal_purchase?></td>
             <td align="center"><?=$row->satuan?></td>
-            <td align="center"><?=$row->harga_satuan?></td>
-            <td align="center"><?=$row->total?></td>
+            <td align="left">Rp. <?=number_format($row->harga_satuan)?></td>
+            <td align="left">Rp. <?=number_format($row->total)?></td>
             <td align="center">
             <?php
               $sesi = from_session('level');

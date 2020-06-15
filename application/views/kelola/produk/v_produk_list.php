@@ -40,8 +40,8 @@
             <td align="center"><?=$row->nama_produk?></td>
             <td align="center"><?=$row->jenis_produk?></td>
             <td align="center"><?=$row->nama_supplier?></td>
-            <td align="center"><?=$row->harga_jual?></td>
-            <td align="center"><?=$row->harga_supplier?></td>
+            <td align="left">Rp. <?=number_format($row->harga_jual)?></td>
+            <td align="left">Rp. <?=number_format($row->harga_supplier)?></td>
             <td align="center"><img src="<?php echo base_url().$row->gambar; ?>" class="file-preview-image"></td>
             <td align="center">
             <?php

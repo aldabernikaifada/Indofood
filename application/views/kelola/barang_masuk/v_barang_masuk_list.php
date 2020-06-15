@@ -42,7 +42,7 @@
             <td align="center"><?=$row->nama_produk?></td>
             <td align="center"><?=$row->jenis_produk?></td>
             <td align="center"><?=$row->satuan?></td>
-            <td align="center"><?=$row->harga_satuan?></td>
+            <td align="left">Rp. <?=number_format($row->harga_satuan)?></td>
             <td align="center"><?=$row->jumlah?></td>
             <td align="center"><?=$row->tanggal_masuk?></td>
             <td align="center">
