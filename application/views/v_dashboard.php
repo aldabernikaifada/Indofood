@@ -18,8 +18,15 @@
                     <h5 class="description-header">SELAMAT DATANG DI GUBUG MART</h5>
                     <span class="description-text"><?php echo button('load_silent("cms/user/show_editForm_user/'.from_session('id').'","#content")','Update Profil','btn bg-red','data-toggle="tooltip" title="Update Profil"');?> 
 						</span>
-                  </div>
-                  <!-- /.description-block -->
+						</div>
+                 <!-- /.description-block -->
+                </div>
+                <div class="box-body">
+                <div class="row">
+                <div class="col-sm-12 border-right">
+                <?php require_once ('application/views/dasbord.php') ?>
+                </div>
+                </div>
                 </div>
                 
                 <!-- /.col -->
@@ -28,144 +35,4 @@
             </div>
           </div>
           <!-- /.widget-user -->
-          </div>
-<!-- Main content --> 
-		<section class="content">
-		<!-- Small boxes (Stat box) --> 
-		<div class="row">
-		<div class="col-lg-3 col-xs-6">
-		<!-- small box -->
-		<div class="small-box bg-green">
-		<div class="inner">
-		<h3>150</h3>
-		<p>Customer</p>
-		</div>
-		<div class="icon">
-		<i class="fa fa-cubes"></i>
-		</div>
-		<a href="?page" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-		</div>
-		</div>
-
-    <!-- Small boxes (Stat box) --> 
-		<div class="row">
-		<div class="col-lg-3 col-xs-6">
-		<!-- small box --> 
-		<div class="small-box bg-purple">
-		<div class="inner">
-		<h3>20</h3>
-		<p>Supplier</p>
-		</div>
-		<div class="icon">
-		<i class="fa fa-cubes"></i>
-		</div>
-		<a href="application/kelola/supplier" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-		</div>
-		</div>
-
-		<!-- ./col --> 
-		<div class="col-lg-3 col-xs-6">
-		<!-- small box --> 
-		<div class="small-box bg-orange">
-		<div class="inner">
-		<h3>200</h3>
-		<p>Produk</p>
-		</div>
-		<div class="icon">
-		<i class="fa fa-cubes"></i>
-		</div>
-		<a href="?page" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-		</div>
-    </div>
-
-		<!-- ./col -->
-		<div class="col-lg-3 col-xs-6">
-		<!-- small box --> 
-		<div class="small-box bg-purple">
-		<div class="inner">
-		<h3>65</h3> 
-		<p>Purchase</p>
-		</div>
-		<div class="icon">
-    <i class="fa fa-cubes"></i>
-		</div>
-		<a href="?page" class="small-box-footer">More info <i class ="fa fa-arrow-circle-right"></i></a>
-		</div>
-		</div>
-
-    	<!-- ./col -->
-		<div class="col-lg-3 col-xs-6">
-		<!-- small box --> 
-		<div class="small-box bg-green">
-		<div class="inner">
-		<h3>200</h3> 
-		<p>Stok</p>
-		</div>
-		<div class="icon">
-    <i class="fa fa-cubes"></i>
-		</div>
-		<a href="?page" class="small-box-footer">More info <i class ="fa fa-arrow-circle-right"></i></a>
-		</div>
-		</div>
-
-    	<!-- ./col -->
-		<div class="col-lg-3 col-xs-6">
-		<!-- small box --> 
-		<div class="small-box bg-red">
-		<div class="inner">
-		<h3>65</h3> 
-		<p>Pengembalian</p>
-		</div>
-		<div class="icon">
-    <i class="fa fa-cubes"></i>
-		</div>
-		<a href="?page" class="small-box-footer">More info <i class ="fa fa-arrow-circle-right"></i></a>
-		</div>
-		</div>
-
-		<!-- ./col -->
-		<div class="col-lg-3 col-xs-6">
-		<!-- small box --> 
-		<div class="small-box bg-green">
-		<div class="inner">
-		<h3>170</h3> 
-		<p>Penjualan</p>
-		</div>
-		<div class="icon">
-    <i class="fa fa-cubes"></i>
-		</div>
-		<a href="?page" class="small-box-footer">More info <i class ="fa fa-arrow-circle-right"></i></a>
-		</div>
-		</div>
-
-		<!-- ./col -->
-		<div class="col-lg-3 col-xs-6">
-		<!-- small box --> 
-		<div class="small-box bg-orange">
-		<div class="inner">
-		<h3>200</h3> 
-		<p>Barang Masuk</p>
-		</div>
-		<div class="icon">
-    <i class="fa fa-cubes"></i>
-		</div>
-		<a href="?page" class="small-box-footer">More info <i class ="fa fa-arrow-circle-right"></i></a>
-		</div>
-		</div>
-
-		<!-- ./col -->
-		<div class="col-lg-3 col-xs-6">
-		<!-- small box --> 
-		<div class="small-box bg-purple">
-		<div class="inner">
-		<h3>170</h3> 
-		<p>Barang Keluar</p>
-		</div>
-		<div class="icon">
-    <i class="fa fa-cubes"></i>
-		</div>
-		<a href="?page" class="small-box-footer">More info <i class ="fa fa-arrow-circle-right"></i></a>
-		</div>
-		</div>
-    </div>
-    
+        </div>
