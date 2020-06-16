@@ -23,6 +23,7 @@
                 <th>No</th>
                 <th>Kode Supplier</th>
                 <th>Nama Supplier</th>
+                <th>Alamat</th>
                 <th>Nomor Telepon</th>
                 <th>Keterangan</th>
                 <th>Act</th>
@@ -35,6 +36,7 @@
           <td align="center"><?=$i++?></td>
             <td align="center"><?=$row->kode_supplier?></td>
             <td align="center"><?=$row->nama_supplier?></td>
+            <td align="center"><?=$row->alamat?></td>
             <td align="center"><?=$row->telepon?></td>
             <td align="center"><?=$row->keterangan?></td>
             <td align="center">

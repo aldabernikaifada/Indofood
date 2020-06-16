@@ -51,7 +51,7 @@ class supplier extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','kode_supplier','nama_supplier','telepon','keterangan'));
+			$datapost = get_post_data(array('id','kode_supplier','nama_supplier','alamat','telepon','keterangan'));
 			$this->m_supplier->insertData($datapost);
 			$this->fungsi->run_js('load_silent("kelola/supplier","#content")');
 			$this->fungsi->message_box("Data Supplier disimpan...","success");
@@ -85,7 +85,7 @@ class supplier extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','kode_supplier','nama_supplier','telepon','keterangan'));
+			$datapost = get_post_data(array('id','kode_supplier','nama_supplier','alamat','telepon','keterangan'));
 			$this->m_supplier->updateData($datapost);
 			$this->fungsi->run_js('load_silent("kelola/supplier","#content")');
 			$this->fungsi->message_box("Data Supplier sukses diperbarui...","success");

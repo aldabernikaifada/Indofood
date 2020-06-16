@@ -23,6 +23,13 @@
             </div>
         </div>
         <div class="form-group">
+            <label class="col-sm-4 control-label">Alamat</label>
+            <div class="col-sm-8">
+            <?php echo form_input(array('name'=>'alamat','value'=>$row->alamat,'class'=>'form-control'));?>
+            <?php echo form_error('alamat');?>
+            </div>
+        </div>
+        <div class="form-group">
             <label class="col-sm-4 control-label">Nomor Telepon</label>
             <div class="col-sm-8">
             <?php echo form_input(array('name'=>'telepon','value'=>$row->telepon,'class'=>'form-control'));?>
